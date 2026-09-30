@@ -1,6 +1,43 @@
 # claude-ceshi
 
-claude 测试项目仓库
+> 用来测试 Claude Code 自定义 skill 的仓库。目前收录一个中文恋爱军师 skill：**狗头军师（进攻版）**。
+
+## 项目简介
+
+`claude-ceshi` 是一个 Claude Code 的试验仓库，用来验证项目级 skill 能不能直接部署、自动加载和调用。
+
+仓库里的主角是**狗头军师（进攻版）**。它改编自开源项目 [goutoujunshi](https://github.com/shengjidaguai-china/goutoujunshi)：原版是覆盖恋爱全过程的关系顾问，进攻版把重点收窄到"追求期怎么往前推"，提供进攻时间表、档位切换、主导式话术和线下见面安排，帮你把"不敢约、聊不热、停在线上"变成具体的下一步。
+
+**亮点**
+
+- **开箱即用**：只有一个 `SKILL.md`，没有外部依赖。克隆仓库、启动 Claude Code 就能用。
+- **给能直接发的话**：问"这句怎么回"，直接给一条可复制的回复，再补一条稳健备选、发送时机和后续怎么接。
+- **节奏清楚**：每次分析都告诉你现在进行到哪一步、有没有落后、下一步做什么。
+- **强度可调**：稳健、进攻、满攻三个档位，随时说"再猛一点"或"收一点"。
+- **有底线**：对方明确拒绝、让你别联系或拉黑时，立即停止。
+
+## 目录结构
+
+```text
+claude-ceshi/
+├── .claude/
+│   └── skills/
+│       └── goutoujunshi/
+│           ├── SKILL.md      # skill 本体（进攻版）
+│           └── LICENSE       # 原项目 MIT 许可证
+├── COMPARISON.md             # 进攻版与原版的详细对比
+└── README.md
+```
+
+## 快速开始
+
+```bash
+git clone https://github.com/a16689525392-prog/claude-ceshi.git
+cd claude-ceshi
+claude
+```
+
+进入 Claude Code 后，直接描述你的情况（比如"她说最近忙，下次吧，我怎么回？"），skill 会自动触发；也可以输入 `/goutoujunshi` 手动调用。
 
 ## Skills
 
